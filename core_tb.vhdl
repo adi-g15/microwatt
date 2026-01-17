@@ -19,7 +19,7 @@ begin
     soc0: entity work.soc
         generic map(
             SIM => true,
-            MEMORY_SIZE => (384*1024),
+            MEMORY_SIZE => (32*1024*1024),
             RAM_INIT_FILE => "main_ram.bin",
             CLK_FREQ => 100000000
             )
