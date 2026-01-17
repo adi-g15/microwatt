@@ -800,8 +800,8 @@ begin
                 ex1 <= reg_stage1_type_init;
                 ex2 <= reg_stage2_type_init;
                 ctrl <= ctrl_t_init;
-                ctrl.msr <= (MSR_SF => '1', MSR_HV => '1', MSR_LE => '0', others => '0');
-                ex1.msr <= (MSR_SF => '1', MSR_HV => '1', MSR_LE => '0', others => '0');
+                ctrl.msr <= (MSR_SF => '1', MSR_HV => '1', MSR_LE => '1', others => '0');
+                ex1.msr <= (MSR_SF => '1', MSR_HV => '1', MSR_LE => '1', others => '0');
             else
                 ex1 <= ex1in;
                 ex2 <= ex2in;
@@ -2246,7 +2246,7 @@ begin
             ctrl_tmp.msr(MSR_FE1) <= '0';
             ctrl_tmp.msr(MSR_IR) <= interrupt_in.alt_int;
             ctrl_tmp.msr(MSR_DR) <= interrupt_in.alt_int;
-            ctrl_tmp.msr(MSR_LE) <= '0';
+            ctrl_tmp.msr(MSR_LE) <= '1';
             if interrupt_in.scv_int = '0' then
                 ctrl_tmp.msr(MSR_EE) <= '0';
             end if;

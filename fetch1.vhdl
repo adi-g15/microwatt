@@ -397,7 +397,7 @@ begin
             v.req := '0';
             v.virt_mode := w_in.alt_intr and not rst;
             v.priv_mode := '1';
-            v.big_endian := '1';
+            v.big_endian := '0';
             v_int.mode_32bit := '0';
             v_int.rd_is_niap4 := '0';
             v_int.tlbstall := '0';
